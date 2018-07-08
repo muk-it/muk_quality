@@ -1,10 +1,10 @@
-===================================
-MuK QMS Documents Mandatory Reading
-===================================
+=================
+MuK QMS Documents
+=================
 
-This module allows to set user groups, which must have read the document, so
-that it can be switched to the next stage. This is useful to ensure, for example,
-that a policy has been read by everyone before it comes into effect.
+This quality management module installs a basic implementation of a controlled
+document according to ISO-9001. In addition to documents, templates can also be
+created to facilitate the workflow. The stages of a document can be set individually.
 
 Installation
 ============
@@ -19,13 +19,13 @@ clicking on the install button.
 Configuration
 =============
 
-No additional configuration is needed to use this module.
+Basically no settings are necessary to use the module. A set of predefined stages
+has already been set up. These can then be adjusted as desired.
 
 Usage
 =====
 
-Go to any document. A new tab for setting the mandatory users is available in
-the form view.
+Simply go to the module and create a new document or start creating a new template.
 
 Credits
 =======
@@ -35,6 +35,13 @@ Contributors
 
 * Kerrim Abd-El-Hamed <kerrim.abdelhamed@mukit.at>
 * Mathias Markl <mathias.markl@mukit.at>
+
+Images
+------------
+
+Some pictures are based on or inspired by:
+
+* `Freepik <https://www.flaticon.com/authors/freepik>`_
 
 Author & Maintainer
 -------------------
