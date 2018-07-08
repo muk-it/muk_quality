@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--     
+	Copyright (C) 2017 MuK IT GmbH
+	
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+-->
+
+<odoo>
+
+<record id="demo_document_00" model="muk_quality_docs.document">
+	<field name="name">Document 00</field>
+	<field name="ref">D00</field>
+	<field name="stage_id" ref="expired" />
+</record>
+
+<record id="demo_document_01" model="muk_quality_docs.document">
+	<field name="name">Document 01</field>
+	<field name="ref">D01</field>
+	<field name="stage_id" ref="expired" />
+</record>
+
+<record id="demo_document_02" model="muk_quality_docs.document">
+	<field name="name">Document 02</field>
+	<field name="ref">D02</field>
+	<field name="stage_id" ref="expired" />
+</record>
+
+<record id="demo_document_03" model="muk_quality_docs.document">
+	<field name="name">Document 03</field>
+	<field name="ref">D03</field>
+	<field name="stage_id" ref="valid" />
+</record>
+
+<record id="demo_document_04" model="muk_quality_docs.document">
+	<field name="name">Document 04</field>
+	<field name="ref">D04</field>
+	<field name="stage_id" ref="valid" />
+</record>
+
+<record id="demo_document_05" model="muk_quality_docs.document">
+	<field name="name">Document 05</field>
+	<field name="ref">D05</field>
+	<field name="stage_id" ref="valid" />
+</record>
+
+<record id="demo_document_06" model="muk_quality_docs.document">
+	<field name="name">Document 06</field>
+	<field name="ref">D06</field>
+	<field name="stage_id" ref="valid" />
+</record>
+
+<record id="demo_document_07" model="muk_quality_docs.document">
+	<field name="name">Document 07</field>
+	<field name="ref">D07</field>
+	<field name="stage_id" ref="cleared" />
+	<field name="description">This is Document 07! It is very important that everybody reads this!</field>
+</record>
+
+<record id="demo_document_08" model="muk_quality_docs.document">
+	<field name="name">Document 08</field>
+	<field name="ref">D08</field>
+	<field name="stage_id" ref="cleared" />
+</record>
+
+<record id="demo_document_09" model="muk_quality_docs.document">
+	<field name="name">Document 09</field>
+	<field name="ref">D09</field>
+	<field name="stage_id" ref="cleared" />
+</record>
+
+<record id="demo_document_10" model="muk_quality_docs.document">
+	<field name="name">Document 10</field>
+	<field name="ref">D10</field>
+	<field name="stage_id" ref="cleared" />
+</record>
+
+<record id="demo_document_11" model="muk_quality_docs.document">
+	<field name="name">Document 11</field>
+	<field name="ref">D11</field>
+	<field name="stage_id" ref="cleared" />
+	<field name="description">This is Document 11! It is very important that everybody reads this!</field>
+</record>
+
+<record id="demo_document_12" model="muk_quality_docs.document">
+	<field name="name">Document 12</field>
+	<field name="ref">D12</field>
+	<field name="stage_id" ref="cleared" />
+	<field name="description">This is Document 12! Hopefully it reaches the masses.</field>
+</record>
+
+<record id="demo_document_13" model="muk_quality_docs.document">
+	<field name="name">Document 13</field>
+	<field name="ref">D13</field>
+	<field name="stage_id" ref="toclear" />
+</record>
+
+<record id="demo_document_14" model="muk_quality_docs.document">
+	<field name="name">Document 14</field>
+	<field name="ref">D14</field>
+	<field name="stage_id" ref="toclear" />
+</record>
+
+<record id="demo_document_15" model="muk_quality_docs.document">
+	<field name="name">Document 15</field>
+	<field name="ref">D15</field>
+	<field name="stage_id" ref="toclear" />
+</record>
+
+<record id="demo_document_16" model="muk_quality_docs.document">
+	<field name="name">Document 16</field>
+	<field name="ref">D16</field>
+	<field name="stage_id" ref="created" />
+	<field name="description">This is Document 16! Hopefully it reaches the masses.</field>
+</record>
+
+<record id="demo_document_17" model="muk_quality_docs.document">
+	<field name="name">Document 17</field>
+	<field name="ref">D17</field>
+	<field name="stage_id" ref="created" />
+</record>
+
+<record id="demo_document_18" model="muk_quality_docs.document">
+	<field name="name">Document 18</field>
+	<field name="ref">D18</field>
+	<field name="stage_id" ref="created" />
+</record>
+
+<record id="demo_document_19" model="muk_quality_docs.document">
+	<field name="name">Document 19</field>
+	<field name="ref">D19</field>
+	<field name="stage_id" ref="created" />
+	<field name="description">This is Document 19! It is very important that everybody reads this!</field>
+</record>
+
+<record id="demo_document_20" model="muk_quality_docs.document">
+	<field name="name">Document 20</field>
+	<field name="ref">D20</field>
+	<field name="stage_id" ref="created" />
+	<field name="description">This is Document 20! It is very important that everybody reads this!</field>
+</record>
+
+<record id="demo_document_21" model="muk_quality_docs.document">
+	<field name="name">Document 21</field>
+	<field name="ref">D21</field>
+	<field name="stage_id" ref="created" />
+</record>
+
+<record id="demo_document_22" model="muk_quality_docs.document">
+	<field name="name">Document 22</field>
+	<field name="ref">D22</field>
+</record>
+
+<record id="demo_document_23" model="muk_quality_docs.document">
+	<field name="name">Document 23</field>
+	<field name="ref">D23</field>
+</record>
+
+</odoo>
+

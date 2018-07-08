@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--     
+	Copyright (C) 2017 MuK IT GmbH
+	
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+-->
+
+<odoo>
+
+<record id="stages_list" model="ir.ui.view">
+	<field name="name">muk_quality_docs.stage.list</field>
+	<field name="model">muk_quality_docs.stage</field>
+	<field name="arch" type="xml">
+		<tree string="QMS Stage">
+			<field name="sequence" />
+			<field name="name" />
+			<field name="document_ids" />
+		</tree>
+	</field>
+</record>
+
+<record id="stage_form" model="ir.ui.view">
+	<field name="name">muk_quality_docs.stage.form</field>
+	<field name="model">muk_quality_docs.stage</field>
+	<field name="arch" type="xml">
+		<form string="QMS Stage">
+			<header>
+			</header>
+			<sheet>
+
+				<div class="oe_title">
+					<label for="name" class="oe_edit_only" />
+					<h1>
+						<field name="name" />
+					</h1>
+				</div>
+				
+				<group>
+					<group name="group_main_left">
+						<field name="sequence" />
+					</group>
+					<group name="group_main_right">
+					</group>
+					
+				</group>
+				<notebook name="main_notebook">
+				
+					<sheet string="Workflow" groups="muk_quality_docs.group_muk_quality_docs_manager" >
+						<div class="muk_quality_docs_explanation bg-info">
+							Information and settings for the document workflow.
+						</div>
+						<group>
+							<group string="Information">
+								<field name="next_stage_id" />
+								<field name="prev_stage_id"/>
+							</group>
+						</group>
+					</sheet>
+				
+					<sheet string="Security" groups="muk_quality_docs.group_muk_quality_docs_manager" >
+						<div class="muk_quality_docs_explanation bg-info">
+							Set permissions for specific roles.
+						</div>
+						<group>
+							<group string="Read Permissions">
+								<field name="has_read_access_for_users" string="Users" />
+								<field name="has_read_access_for_authors" string="Authors" />
+							</group>
+							<group string="Write Permissions">
+								<field name="has_write_access_for_authors" string="Authors" />
+								<field name="has_write_access_for_managers" string="Managers" />
+							</group>
+						</group>
+						<group>
+							<group string="Next Stage">
+								<field name="next_stage_group" string="Group" />
+							</group>
+							<group string="Previous Stage">
+								<field name="prev_stage_group" string="Group" />
+							</group>
+						</group>
+					</sheet>
+				
+					<sheet string="Documents" name="sheet_documents" groups="muk_quality_docs.group_muk_quality_docs_manager" >
+						<div class="muk_quality_docs_explanation bg-info">
+							List of all documents that are currently in this stage.
+						</div>
+						<field name="document_ids" readonly="1" />
+					</sheet>
+					
+				</notebook>
+			</sheet>
+			
+			<div class="oe_chatter">
+			    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+			    <field name="message_ids" widget="mail_thread"/>
+			</div>
+		</form>
+	</field>
+</record>
+
+<record id="stages" model="ir.actions.act_window">
+	<field name="name">QMS Stages</field>
+	<field name="res_model">muk_quality_docs.stage</field>
+	<field name="view_mode">tree,form</field>
+	<field name="view_id" ref="stages_list" />
+<!-- 	<field name="search_view_id" ref="stages_search" /> -->
+</record>
+
+</odoo>

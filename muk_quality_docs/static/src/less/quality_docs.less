@@ -1,0 +1,102 @@
+/**********************************************************************************
+* 
+*    Copyright (C) 2017 MuK IT GmbH
+*
+*    This program is free software: you can redistribute it and/or modify
+*    it under the terms of the GNU Affero General Public License as
+*    published by the Free Software Foundation, either version 3 of the
+*    License, or (at your option) any later version.
+*
+*    This program is distributed in the hope that it will be useful,
+*    but WITHOUT ANY WARRANTY; without even the implied warranty of
+*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*    GNU Affero General Public License for more details.
+*
+*    You should have received a copy of the GNU Affero General Public License
+*    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*
+**********************************************************************************/
+
+.muk_quality_docs_explanation {
+	width: 100%;
+    text-align: left;
+    font-size: 110%;
+    padding: 10px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.muk_quality_docs_notice {
+	width: 100%;
+    text-align: center;
+    font-size: 200%;
+    padding-top: 10px;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+
+.mk_quality_docs_document_sidebar {
+	float: left;
+    height: 100%;
+	width: 60px;
+    overflow: auto;
+    position: fixed;
+    background-color: @odoo-control-panel-background-color;
+    border-right: 1px solid darken(@odoo-control-panel-background-color, 20%);
+    .mk_quality_docs_sidebar_actions {
+    	background-color: darken(@odoo-control-panel-background-color, 40%);
+    	a {
+    		position: relative;
+	    	display: block;
+		    text-align: center;
+		    padding: 10px;
+		    transition: all 0.3s ease;
+		    color: white;
+		    font-size: 30px;
+		    height: 60px;
+		    &.active, &:hover {
+			    background-color: darken(@odoo-control-panel-background-color, 60%);
+			}
+		}
+		.badge_icon {
+			right: 8px;
+		    top: 8px;
+		    padding: 1px 2px;
+		    position: absolute;    
+		    min-width: 15px;
+		    font-size: 10px;
+		    font-weight: bold;
+		    vertical-align: middle;
+		    white-space: nowrap;
+		    text-align: center;
+		    background-color: @brand-primary;
+		    border-radius: 10px;
+		}
+    }
+}
+
+.mk_quality_docs_document_sidebar + .mk_quality_docs_document_kanban {
+	padding-left: 60px !important;
+}
+
+.mk_quality_docs_document_kanban {
+	.o_kanban_record {
+		width: 250px ! important;
+	}
+	.mk_quality_docs_read {
+		box-shadow: inset 0px 0px 0px 1px @brand-success;
+	}
+	.o_kanban_record_title {
+		font-size: 14px ! important;
+    	font-weight: 600 ! important;
+	}
+	label {
+		margin-bottom: 2px;
+	}
+	.mk_quality_docs_summary {
+		margin-top: 3px;
+	}
+	.oe_kanban_avatar {
+		margin-left: 0 !important;
+	}
+}
