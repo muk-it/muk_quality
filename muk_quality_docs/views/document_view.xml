@@ -166,6 +166,8 @@
 			<field name="ref" />
 			<field name="name" />
 			<field name="stage_id" />
+			<field name="create_uid" />
+			<field name="create_date" />
 			<button name="toggle_read" string="Mark as Read" type="object" 
 				icon="fa-envelope" attrs="{'invisible': [('is_read', '!=', False)]}"/>
 		</tree>
