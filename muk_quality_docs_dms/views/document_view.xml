@@ -26,10 +26,10 @@
 	<field name="arch" type="xml">
 		<xpath expr="//kanban//templates" position="before">
 			<field name="preview_name"/>
-			<field name="preview_binary"/>
+			<field name="has_preview"/>
 		</xpath>
 		<xpath expr="//div[@class='oe_kanban_bottom_left']" position="inside">
-			<t t-if="record.preview_binary.raw_value">
+			<t t-if="record.has_preview.raw_value">
             	<button title="Preview" class="o_icon_button mk_quality_docs_preview"
             		t-att-data-filename="record.preview_name.raw_value" data-field="preview_binary"
             		data-filename_field="preview_name" t-att-data-id="record.id.raw_value">
@@ -54,6 +54,7 @@
 	    <xpath expr="//sheet[@name='sheet_technical_information']" position="inside">
 	    	<group string="DMS">
 	    		<field name="user_can_only_see_viewer_file" />
+	    		<field name="has_preview" />
 	    	</group>
 	    	<group>
 	    		<group string="File">

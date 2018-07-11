@@ -281,6 +281,21 @@
 	<field name="res_model">muk_quality_docs.document</field>
 	<field name="view_mode">kanban,tree,form</field>
 	<field name="search_view_id" ref="documents_search" />
+	<field name="context">{'sidebar_action': 'sidebar_all'}</field>
+	<field name="help" type="html">
+	    <p class="oe_view_nocontent_create">
+	      	Click to create a new document.
+	    </p>
+    </field>
+</record>
+
+<record id="documents_all" model="ir.actions.act_window">
+	<field name="name">All</field>
+	<field name="res_model">muk_quality_docs.document</field>
+	<field name="view_mode">kanban,tree,form</field>
+	<field name="target">main</field>
+	<field name="search_view_id" ref="documents_search" />
+	<field name="context">{'sidebar_action': 'sidebar_all'}</field>
 	<field name="help" type="html">
 	    <p class="oe_view_nocontent_create">
 	      	Click to create a new document.
@@ -292,6 +307,7 @@
 	<field name="name">Inbox</field>
 	<field name="res_model">muk_quality_docs.document</field>
 	<field name="view_mode">kanban,tree,form</field>
+	<field name="target">main</field>
 	<field name="search_view_id" ref="documents_search" />
 	<field name="domain">[['is_read', '=', False]]</field>
 	<field name="context">{'sidebar_action': 'sidebar_inbox'}</field>
@@ -306,6 +322,7 @@
 	<field name="name">Editor</field>
 	<field name="res_model">muk_quality_docs.document</field>
 	<field name="view_mode">kanban,tree,form</field>
+	<field name="target">main</field>
 	<field name="search_view_id" ref="documents_search" />
 	<field name="domain">[['permission_write', '=', True]]</field>
 	<field name="context">{'sidebar_action': 'sidebar_editor'}</field>
@@ -320,6 +337,7 @@
 	<field name="name">Partner</field>
 	<field name="res_model">muk_quality_docs.document</field>
 	<field name="view_mode">kanban,tree,form</field>
+	<field name="target">main</field>
 	<field name="search_view_id" ref="documents_search" />
 	<field name="domain">[['partner_id', '!=', False]]</field>
 	<field name="context">{'search_default_group_by_partner': 1, 'sidebar_action': 'sidebar_partner'}</field>

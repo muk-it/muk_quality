@@ -38,7 +38,8 @@ class Stage(models.Model):
     #===========================================================================
     
     name = fields.Char(
-        required=True
+        required=True,
+        translate=True
     )
     
     document_ids = fields.One2many(

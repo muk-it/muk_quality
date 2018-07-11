@@ -133,6 +133,10 @@ class Document(models.Model):
         compute="_compute_user_can_only_see_viewer_file"
     )
     
+    has_preview = fields.Boolean(
+        compute="_compute_has_binary"
+    )
+    
     #===========================================================================
     # Inverse Functions
     #===========================================================================
@@ -187,11 +191,21 @@ class Document(models.Model):
     def _compute_preview_binary(self):
         for record in self:
             if record.viewer_file:
-                record.preview_binary = record.viewer_file
+                record.preview_binary = record.viewer_file,
             elif record.file:
-                record.preview_binary = record.file
+                record.preview_binary = record.file,
             else:
-                record.preview_binary = False
+                record.preview_binary = False,
+    
+    @api.depends("file","viewer_file")
+    def _compute_has_binary(self):
+        for record in self:
+            if record.with_context({'bin_size': True}).viewer_file:
+                record.has_binary = True,
+            elif record.with_context({'bin_size': True}).file:
+                record.has_binary = True,
+            else:
+                record.has_binary = False,
                 
     def _compute_user_can_only_see_viewer_file(self):
         normal_user = not self.env.user.has_group("muk_quality_docs.group_muk_quality_docs_author")

@@ -31,6 +31,12 @@ class QualityController(http.Controller):
         return {
             'actions': [
                 {   
+                    'id': 'all',
+                    'tooltip': _("All"),
+                    'action': request.env.ref('muk_quality_docs.documents_all').id,
+                    'icon': "fa fa-list",
+                    'badge': request.env['muk_quality_docs.document'].search([], count=True) or 0,
+                }, {   
                     'id': 'inbox',
                     'tooltip': _("Inbox"),
                     'action': request.env.ref('muk_quality_docs.documents_unread').id,
