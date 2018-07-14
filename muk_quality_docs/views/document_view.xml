@@ -166,7 +166,6 @@
 			<field name="ref" />
 			<field name="name" />
 			<field name="stage_id" />
-			<field name="create_uid" />
 			<field name="create_date" />
 			<button name="toggle_read" string="Mark as Read" type="object" 
 				icon="fa-envelope" attrs="{'invisible': [('is_read', '!=', False)]}"/>
@@ -223,7 +222,7 @@
 						<field name="description" widget="html" />
 					</sheet>
 					
-					<sheet string="Document Permissions" name="sheet_document_permissions" groups="muk_quality_docs.group_muk_quality_docs_manager" >
+					<sheet string="Permissions" name="sheet_document_permissions" groups="muk_quality_docs.group_muk_quality_docs_manager" >
 						<div class="muk_quality_docs_explanation bg-info">
 							Set specific permissions on who can see or write on this document. This permissions can only limit the
 							access rights set in the stages and not extend them.
