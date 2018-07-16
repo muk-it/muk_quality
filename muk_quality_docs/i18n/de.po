@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-01 10:56+0000\n"
-"PO-Revision-Date: 2018-07-01 13:47+0200\n"
+"PO-Revision-Date: 2018-07-13 13:06+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,12 +20,12 @@ msgstr ""
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_res_config_settings_enable_workflow_prev_stage
 msgid "Allow jumping back in stages"
-msgstr "Erlaubt das Zurückspringen in Etappen"
+msgstr "Zurückspringen im Workflow erlauben"
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,help:muk_quality_docs.field_res_config_settings_enable_workflow_prev_stage
 msgid "Allow managers to jump back in stages."
-msgstr "Lassen Sie die Manager in Etappen zurückspringen."
+msgstr "Zurückspringen im Workflow nur für Manager  erlauben."
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_document_read_ids
@@ -47,7 +47,7 @@ msgstr "Autoren"
 #: code:addons/muk_quality_docs/models/document.py:406
 #, python-format
 msgid "Authors are not allowed to write on this stage!"
-msgstr "Autoren dürfen auf dieser Bühne nicht schreiben!"
+msgstr "Eine Bearbeitung durch Autoren ist in diesem Status nicht möglich!"
 
 #. module: muk_quality_docs
 #: model:ir.actions.act_window,help:muk_quality_docs.documents
@@ -55,13 +55,13 @@ msgstr "Autoren dürfen auf dieser Bühne nicht schreiben!"
 #: model:ir.actions.act_window,help:muk_quality_docs.documents_partner
 #: model:ir.actions.act_window,help:muk_quality_docs.documents_unread
 msgid "Click to create a new document."
-msgstr "Klicken Sie auf, um ein neues Dokument zu erstellen."
+msgstr "Neues Dokument erstellen."
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_document_complete_groups
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_template_complete_groups
 msgid "Complete Groups"
-msgstr "Komplette Gruppen"
+msgstr "Vollständige Gruppe"
 
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.document_form
@@ -310,7 +310,7 @@ msgstr "Bearbeiter"
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.document_form
 msgid "Forward"
-msgstr "Vorwärts"
+msgstr "Weiter"
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_document_ref_and_name
@@ -346,32 +346,32 @@ msgstr "Gruppen"
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_stage_has_read_access_for_authors
 msgid "Has Read Access For Authors"
-msgstr "Hat Lesezugriff für Autoren"
+msgstr "Autoren dürfen lesen"
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_stage_has_read_access_for_users
 msgid "Has Read Access For Users"
-msgstr "Hat Lesezugriff für Benutzer"
+msgstr "Benutzer dürfen lesen"
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_document_has_right_for_next_stage
 msgid "Has Right For Next Stage"
-msgstr "Hat Recht für die nächste Stufe"
+msgstr "Darf in nächsten Status wechseln"
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_document_has_right_for_prev_stage
 msgid "Has Right For Prev Stage"
-msgstr "Hat Recht für vorheriges Stadium"
+msgstr "Darf in vorherigen Status wechseln"
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_stage_has_write_access_for_authors
 msgid "Has Write Access For Authors"
-msgstr "Hat Schreibzugriff für Autoren"
+msgstr "Autoren dürfen bearbeiten"
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_stage_has_write_access_for_managers
 msgid "Has Write Access For Managers"
-msgstr "Hat Schreibzugriff für Manager"
+msgstr "Manager dürfen bearbeiten"
 
 #. module: muk_quality_docs
 #: model:muk_quality_docs.template,document_description:muk_quality_docs.demo_template_00
@@ -413,7 +413,7 @@ msgstr "Informationen und Einstellungen für den Dokumenten-Workflow."
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_document_is_read
 msgid "Is Read"
-msgstr "Ist gelesen"
+msgstr "Gelesen"
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_document___last_update
@@ -442,7 +442,7 @@ msgstr "Zuletzt aktualisiert am"
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.stage_form
 msgid "List of all documents that are currently in this stage."
-msgstr "Liste aller Dokumente, die sich derzeit in dieser Phase befinden."
+msgstr "Alle Dokumente in diesem Status."
 
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.template_form
@@ -452,7 +452,7 @@ msgstr "Liste aller Dokumente, die mit dieser Vorlage erstellt wurden."
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.document_form
 msgid "List of all users who have already read this document."
-msgstr "Liste aller Benutzer, die dieses Dokument bereits gelesen haben."
+msgstr "Bereits gelesen von"
 
 #. module: muk_quality_docs
 #: model:ir.module.category,description:muk_quality_docs.module_muk_quality_docs_category
@@ -467,13 +467,13 @@ msgstr "Manager"
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.stage_form
 msgid "Managers"
-msgstr "Managers"
+msgstr "Manager"
 
 #. module: muk_quality_docs
 #: code:addons/muk_quality_docs/models/document.py:402
 #, python-format
 msgid "Managers are not allowed to write on this stage!"
-msgstr "Manager dürfen auf dieser Bühne nicht schreiben!"
+msgstr "Eine Bearbeitung durch Autoren ist in diesem Status nicht möglich!"
 
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.documents_kanban
@@ -497,12 +497,12 @@ msgstr "Name"
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_stage_next_stage_id
 #: model:ir.ui.view,arch_db:muk_quality_docs.stage_form
 msgid "Next Stage"
-msgstr "Nächste Etappe"
+msgstr "Nächster Status"
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_stage_next_stage_group
 msgid "Next Stage Group"
-msgstr "Nächste Etappe Gruppe"
+msgstr "Berechtige Gruppe für den nächsten Status"
 
 #. module: muk_quality_docs
 #: code:addons/muk_quality_docs/controllers/main.py:47
@@ -519,17 +519,17 @@ msgstr "Bitte geben Sie eine eindeutige Reihenfolge ein."
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_stage_prev_stage_id
 msgid "Prev Stage"
-msgstr "Vorherige Etappe"
+msgstr "Vorheriger Status"
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_stage_prev_stage_group
 msgid "Prev Stage Group"
-msgstr "Vorherige Etappe Gruppe"
+msgstr "Berechtige Gruppe für den nächsten Status"
 
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.stage_form
 msgid "Previous Stage"
-msgstr "Vorherige Etappe"
+msgstr "Vorheriger Status"
 
 #. module: muk_quality_docs
 #: model:ir.model,name:muk_quality_docs.model_muk_quality_docs_document
@@ -555,12 +555,12 @@ msgstr "QMS Leseinformationen"
 #: model:ir.ui.view,arch_db:muk_quality_docs.stage_form
 #: model:ir.ui.view,arch_db:muk_quality_docs.stages_list
 msgid "QMS Stage"
-msgstr "QMS Stufe"
+msgstr "QMS Status"
 
 #. module: muk_quality_docs
 #: model:ir.actions.act_window,name:muk_quality_docs.stages
 msgid "QMS Stages"
-msgstr "QMS Stufen"
+msgstr "QMS Status"
 
 #. module: muk_quality_docs
 #: model:ir.model,name:muk_quality_docs.model_muk_quality_docs_template
@@ -598,7 +598,7 @@ msgstr "Referenz"
 #: model:base.automation,name:muk_quality_docs.base_automation_refresh_qms_document_on_operation
 #: model:ir.actions.server,name:muk_quality_docs.base_automation_refresh_qms_document_on_operation_ir_actions_server
 msgid "Refresh QMS Document on Creation/Update/Delete)"
-msgstr "QMS-Dokument beim Anlegen/Aktualisieren/Löschen auffrischen)"
+msgstr "QMS-Dokument beim Anlegen/Aktualisieren/Löschen neu laden)"
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_document_partner_id
@@ -613,7 +613,7 @@ msgstr "Rechte für nächsten"
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.document_form
 msgid "Right for previous"
-msgstr "Rechte für vorherige"
+msgstr "Rechte für vorherigen"
 
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.stage_form
@@ -641,13 +641,13 @@ msgid ""
 "Set specific permissions on who can see or write on this document. This permissions can only limit the\n"
 "\t\t\t\t\t\t\taccess rights set in the stages and not extend them."
 msgstr ""
-"Legen Sie bestimmte Berechtigungen fest, wer dieses Dokument sehen oder schreiben darf. Diese Berechtigungen können nur das\n"
+"Legen Sie  Berechtigungen fest, wer dieses Dokument lesen oder schreiben darf. Diese Berechtigungen können nur das\n"
 "\t\t\t\t\t\t\tZugriffsrechte in den Stufen festgelegt und nicht erweitert werden."
 
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.template_form
 msgid "Set specific permissions on who can see or write on this template. Permissions will be copied into created documents."
-msgstr "Legen Sie bestimmte Berechtigungen fest, wer diese Vorlage sehen oder schreiben darf. Berechtigungen werden in die erstellten Dokumente kopiert."
+msgstr "Legen Sie bestimmte Berechtigungen fest, wer diese Vorlage lesen oder schreiben darf. Berechtigungen werden in die erstellten Dokumente kopiert."
 
 #. module: muk_quality_docs
 #: model:ir.ui.menu,name:muk_quality_docs.menu_muk_quality_docs_settings
@@ -659,17 +659,17 @@ msgstr "Einstellungen"
 #: model:ir.ui.view,arch_db:muk_quality_docs.document_form
 #: model:ir.ui.view,arch_db:muk_quality_docs.documents_search
 msgid "Stage"
-msgstr "Stufe"
+msgstr "Status"
 
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.documents_kanban
 msgid "Stage:"
-msgstr "Stufe:"
+msgstr "Status:"
 
 #. module: muk_quality_docs
 #: model:ir.ui.menu,name:muk_quality_docs.menu_muk_quality_docs_stages
 msgid "Stages"
-msgstr "Stufen"
+msgstr "Status"
 
 #. module: muk_quality_docs
 #: model:ir.model.fields,field_description:muk_quality_docs.field_muk_quality_docs_document_state
@@ -752,7 +752,7 @@ msgstr "Template 05 Document XX"
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.template_form
 msgid "Template Permissions"
-msgstr "Template-Berechtigungen"
+msgstr "Berechtigungen für Templates"
 
 #. module: muk_quality_docs
 #: model:ir.ui.menu,name:muk_quality_docs.menu_muk_quality_docs_templates

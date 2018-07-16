@@ -71,7 +71,7 @@
 			<attribute name="string">Description</attribute>
 		</xpath>
 		<xpath expr="//sheet[@name='sheet_content']" position="after">
-			<sheet string="Preview" attrs="{'invisible': [('preview_binary', '=', False)]}">
+			<sheet string="Preview" attrs="{'invisible': [('has_preview', '=', False)]}">
 				<field name="preview_name" invisible="1" />
 				<field name="preview_binary" widget="preview_binary" filename="preview_name" />
 			</sheet>

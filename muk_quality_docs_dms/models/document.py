@@ -21,7 +21,7 @@ import logging
 import os
 import string
 
-from odoo import models, api, fields
+from odoo import models, api, fields, _
 
 from odoo.addons.muk_dms_field.fields import dms_binary
 
@@ -59,7 +59,6 @@ class Document(models.Model):
         if file_directory:
             return int(file_directory)
         else:
-            # raise ValueError("Not-Null-Constraint")
             _logger.warning("You have to provide a directory for QMS files.")
     
     def _get_viewer_file_name(self):
@@ -70,7 +69,7 @@ class Document(models.Model):
             return False
         valid_chars = "-_.() %s%sÄäÜüÖöß" % (string.ascii_letters, string.digits)
         viewer_file_name = "".join(c for c in self.ref_and_name if c in valid_chars)
-        return "{}.{}{}".format(viewer_file_name, self.id, self.viewer_file_ext)
+        return "{}-{}.{}{}".format(_("Viewer"), viewer_file_name, self.id, self.viewer_file_ext)
     
     def _get_viewer_file_directory(self):
         try:
@@ -86,7 +85,6 @@ class Document(models.Model):
         if viewer_file_directory:
             return int(viewer_file_directory)
         else:
-            # raise ValueError("Not-Null-Constraint")
             _logger.warning("You have to provide a directory for QMS viewer files.")
     
     #===========================================================================
@@ -128,14 +126,15 @@ class Document(models.Model):
     preview_binary = fields.Binary(
         compute="_compute_preview_binary",
     )
+        
+    has_preview = fields.Boolean(
+        compute="_compute_preview_binary"
+    )
     
     user_can_only_see_viewer_file = fields.Boolean(
         compute="_compute_user_can_only_see_viewer_file"
     )
-    
-    has_preview = fields.Boolean(
-        compute="_compute_has_binary"
-    )
+
     
     #===========================================================================
     # Inverse Functions
@@ -187,25 +186,11 @@ class Document(models.Model):
             else:
                 record.preview_name = False
                 
-    @api.depends("file","viewer_file")
+    @api.depends("file", "viewer_file")
     def _compute_preview_binary(self):
         for record in self:
-            if record.viewer_file:
-                record.preview_binary = record.viewer_file,
-            elif record.file:
-                record.preview_binary = record.file,
-            else:
-                record.preview_binary = False,
-    
-    @api.depends("file","viewer_file")
-    def _compute_has_binary(self):
-        for record in self:
-            if record.with_context({'bin_size': True}).viewer_file:
-                record.has_binary = True,
-            elif record.with_context({'bin_size': True}).file:
-                record.has_binary = True,
-            else:
-                record.has_binary = False,
+            value = record.viewer_file or record.file
+            record.update({'preview_binary': value, 'has_preview': bool(value)})
                 
     def _compute_user_can_only_see_viewer_file(self):
         normal_user = not self.env.user.has_group("muk_quality_docs.group_muk_quality_docs_author")

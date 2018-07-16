@@ -1,19 +1,21 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* muk_quality_docs_dms
+# 	* muk_quality_docs_dms
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-01 12:44+0000\n"
-"PO-Revision-Date: 2018-07-01 12:44+0000\n"
+"PO-Revision-Date: 2018-07-13 13:10+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"Language: de\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #. module: muk_quality_docs_dms
 #: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
@@ -103,22 +105,22 @@ msgstr "Dateiname"
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_file_directory
 msgid "Folder where controlled document files are saved in."
-msgstr "Ordner, in dem kontrollierte Dokumentdateien gespeichert werden."
+msgstr "Speicherort für gelenkte Dokumente"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_template_file_directory
 msgid "Folder where controlled document template files are saved in."
-msgstr "Ordner, in dem kontrollierte Dokumentvorlagendateien gespeichert werden."
+msgstr "Speicherort für Vorlagen"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_template_viewer_file_directory
 msgid "Folder where controlled document template viewer files are saved in."
-msgstr "Ordner, in dem kontrollierte Dokumentvorlagen-Viewer-Dateien gespeichert sind."
+msgstr "Speicherort für Vorlagen Viewer Dateien"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_viewer_file_directory
 msgid "Folder where controlled document viewer files are saved in."
-msgstr "Ordner, in dem kontrollierte Dokumentviewer-Dateien gespeichert sind."
+msgstr "Speicherort für gelenkte Dokumenten-Viewer-Datei"
 
 #. module: muk_quality_docs_dms
 #: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
@@ -140,7 +142,7 @@ msgstr "Vorschau Binär"
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_preview_name
 msgid "Preview Name"
-msgstr "Name der Vorschau"
+msgstr "Vorschauname"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model,name:muk_quality_docs_dms.model_muk_quality_docs_document
@@ -155,12 +157,12 @@ msgstr "QMS-Vorlage"
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings_template_file_directory
 msgid "Template File Directory"
-msgstr "Template-Datei-Verzeichnis"
+msgstr "Speicherort für Vorlagen"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings_template_viewer_file_directory
 msgid "Template Viewer File Directory"
-msgstr "Template Viewer Dateiverzeichnis"
+msgstr "Speicherort für Vorlagen-Viewer-Dateien"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_user_can_only_see_viewer_file
@@ -194,4 +196,3 @@ msgstr "Viewer-Dateiname"
 #: model:ir.model,name:muk_quality_docs_dms.model_res_config_settings
 msgid "res.config.settings"
 msgstr "res.config.settings"
-
