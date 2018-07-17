@@ -20,6 +20,8 @@
 import re
 import logging
 
+from lxml import etree
+
 from odoo import _
 from odoo import models, api, fields
 from odoo.tools import html2plaintext
@@ -75,6 +77,14 @@ class Document(models.Model):
         track_visibility="onchange"
     )
 
+    prev_stage_name = fields.Char(
+        compute="_compute_stage_names"
+    )
+
+    next_stage_name = fields.Char(
+        compute="_compute_stage_names"
+    )
+
     has_right_for_prev_stage = fields.Boolean(
         compute="_compute_has_right_for_prev_stage"
     )
@@ -118,6 +128,22 @@ class Document(models.Model):
     )
     
     #===========================================================================
+    # View Functions
+    #===========================================================================
+    
+    @api.model
+    def fields_view_get(self, view_id=None, view_type='form', toolbar=False, submenu=False):
+        # This is needed since tree view wont validate with a js_class attribute
+        res = super(Document, self).fields_view_get(view_id, view_type, toolbar, submenu)
+        if view_type == 'tree':
+            doc = etree.fromstring(res['arch'])
+            tree = next(iter( doc.xpath("//tree") or []), None)
+            if len(tree):
+                tree.set("js_class", "qms_document_list")
+                res['arch'] = etree.tostring(doc, encoding='unicode')
+        return res
+        
+    #===========================================================================
     # Computed Functions
     #===========================================================================
     
@@ -145,6 +171,13 @@ class Document(models.Model):
         else:
             self.ensure_one()
             return {'state': "read" if self.is_read else "unread"}         
+    
+    @api.depends('stage_id')
+    def _compute_stage_names(self):
+        for record in self:
+            record.update({
+                'prev_stage_name': record.stage_id.prev_stage_id.name,
+                'next_stage_name': record.stage_id.next_stage_id.name})
     
     @api.depends('description')
     def _compute_summary(self):

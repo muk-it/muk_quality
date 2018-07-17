@@ -24,9 +24,14 @@
 		<link rel="stylesheet" href="/muk_quality_docs/static/src/less/quality_docs.less"/>
 	</xpath>
 	<xpath expr="//script[last()]" position="after">
-		<script type="text/javascript" src="/muk_quality_docs/static/src/js/document_kanban_controller.js" />
-		<script type="text/javascript" src="/muk_quality_docs/static/src/js/document_kanban_renderer.js" />
-		<script type="text/javascript" src="/muk_quality_docs/static/src/js/document_kanban_view.js" />
+		<script type="text/javascript" src="/muk_quality_docs/static/src/js/form/document_form_renderer.js" />
+		<script type="text/javascript" src="/muk_quality_docs/static/src/js/form/document_form_view.js" />
+		<script type="text/javascript" src="/muk_quality_docs/static/src/js/kanban/document_kanban_controller.js" />
+		<script type="text/javascript" src="/muk_quality_docs/static/src/js/kanban/document_kanban_renderer.js" />
+		<script type="text/javascript" src="/muk_quality_docs/static/src/js/kanban/document_kanban_view.js" />
+		<script type="text/javascript" src="/muk_quality_docs/static/src/js/list/document_list_controller.js" />
+		<script type="text/javascript" src="/muk_quality_docs/static/src/js/list/document_list_renderer.js" />
+		<script type="text/javascript" src="/muk_quality_docs/static/src/js/list/document_list_view.js" />
 	</xpath>
 </template>
 

@@ -40,6 +40,19 @@
 	</field>
 </record>
 
+<record id="documents_list_dms" model="ir.ui.view">
+	<field name="name">muk_quality_docs.document.tree.dms</field>
+	<field name="model">muk_quality_docs.document</field>
+	<field name="priority" eval="20"/>
+	<field name="inherit_id" ref="muk_quality_docs.documents_list"/>
+	<field name="arch" type="xml">
+	    <xpath expr="//field[@name='create_date']" position="after">
+	    	<field name="preview_name" invisible="1" />
+	    	<field name="preview_binary" widget="binary" filename="preview_name" />
+		</xpath>
+    </field>
+</record>
+
 <record id="document_form_dms" model="ir.ui.view">
 	<field name="name">muk_quality_docs.document.form.dms</field>
 	<field name="model">muk_quality_docs.document</field>

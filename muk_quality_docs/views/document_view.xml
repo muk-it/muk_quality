@@ -43,7 +43,7 @@
 	<field name="model">muk_quality_docs.document</field>
 	<field name="arch" type="xml">
 		<kanban class="mk_quality_docs_document_kanban o_kanban_small_column" quick_create="false"
-			group_create="false" group_delete="false" group_edit="false" js_class="document_kanban">
+			group_create="false" group_delete="false" group_edit="false" js_class="qms_document_kanban">
 			<field name="id" />
 			<field name="name" />
 			<field name="ref" />
@@ -177,7 +177,7 @@
 	<field name="name">muk_quality_docs.document.form</field>
 	<field name="model">muk_quality_docs.document</field>
 	<field name="arch" type="xml">
-		<form string="QMS Document">
+		<form string="QMS Document" js_class="qms_document_form">
 			<header>
 				<button name="set_stage_to_next" type="object" string="Forward" class="oe_highlight"
 					attrs="{'invisible':[('has_right_for_next_stage','=',False)]}" />
@@ -191,12 +191,15 @@
 				<field name="stage_id" widget="statusbar" />
 			</header>
 			<sheet>
-                   <div class="oe_button_box" name="button_box">
-                       <button name="toggle_read" type="object" class="oe_stat_button" icon="fa-book">
-                           <field name="is_read" widget="boolean_button" 
-                           	options="{&quot;terminology&quot;: {&quot;string_true&quot;: &quot;Read&quot;, &quot;string_false&quot;: &quot;Not Read&quot;, &quot;hover_true&quot;: &quot;Set Not Read&quot;, &quot;hover_false&quot;: &quot;Set Read&quot;}}"/>
-                       </button>
-                   </div>
+                <div class="oe_button_box" name="button_box">
+                    <button name="toggle_read" type="object" class="oe_stat_button" icon="fa-book">
+                        <field name="is_read" widget="boolean_button" 
+                        	options="{&quot;terminology&quot;: {&quot;string_true&quot;: &quot;Read&quot;, &quot;string_false&quot;: &quot;Not Read&quot;, &quot;hover_true&quot;: &quot;Set Not Read&quot;, &quot;hover_false&quot;: &quot;Set Read&quot;}}"/>
+                    </button>
+                </div>
+
+				<field name="prev_stage_name" invisible="1" />
+				<field name="next_stage_name" invisible="1" />
 
 				<div class="oe_title">
 					<label for="name" class="oe_edit_only" />
@@ -275,10 +278,30 @@
 	</field>
 </record>
 
+<record id="document_graph" model="ir.ui.view">
+	<field name="name">muk_quality_docs.document.graph</field>
+	<field name="model">muk_quality_docs.document</field>
+	<field name="arch" type="xml">
+		<graph type="pie" >
+			<field name="stage_id" type="row" />
+		</graph>
+	</field>
+</record>
+
+<record id="document_pivot" model="ir.ui.view">
+	<field name="name">muk_quality_docs.document.pivot</field>
+	<field name="model">muk_quality_docs.document</field>
+	<field name="arch" type="xml">
+		<pivot display_quantity="true" >
+			<field name="stage_id" type="col" />
+		</pivot>
+	</field>
+</record>
+
 <record id="documents" model="ir.actions.act_window">
 	<field name="name">QMS Documents</field>
 	<field name="res_model">muk_quality_docs.document</field>
-	<field name="view_mode">kanban,tree,form</field>
+	<field name="view_mode">kanban,tree,graph,pivot,form</field>
 	<field name="search_view_id" ref="documents_search" />
 	<field name="context">{'sidebar_action': 'sidebar_all'}</field>
 	<field name="help" type="html">
@@ -288,10 +311,10 @@
     </field>
 </record>
 
-<record id="documents_all" model="ir.actions.act_window">
+<record id="documents_all_kanban" model="ir.actions.act_window">
 	<field name="name">All</field>
 	<field name="res_model">muk_quality_docs.document</field>
-	<field name="view_mode">kanban,tree,form</field>
+	<field name="view_mode">kanban,tree,graph,pivot,form</field>
 	<field name="target">main</field>
 	<field name="search_view_id" ref="documents_search" />
 	<field name="context">{'sidebar_action': 'sidebar_all'}</field>
@@ -302,10 +325,10 @@
     </field>
 </record>
 
-<record id="documents_unread" model="ir.actions.act_window">
+<record id="documents_unread_kanban" model="ir.actions.act_window">
 	<field name="name">Inbox</field>
 	<field name="res_model">muk_quality_docs.document</field>
-	<field name="view_mode">kanban,tree,form</field>
+	<field name="view_mode">kanban,tree,graph,pivot,form</field>
 	<field name="target">main</field>
 	<field name="search_view_id" ref="documents_search" />
 	<field name="domain">[['is_read', '=', False]]</field>
@@ -317,10 +340,10 @@
     </field>
 </record>
 
-<record id="documents_editor" model="ir.actions.act_window">
+<record id="documents_editor_kanban" model="ir.actions.act_window">
 	<field name="name">Editor</field>
 	<field name="res_model">muk_quality_docs.document</field>
-	<field name="view_mode">kanban,tree,form</field>
+	<field name="view_mode">kanban,tree,graph,pivot,form</field>
 	<field name="target">main</field>
 	<field name="search_view_id" ref="documents_search" />
 	<field name="domain">[['permission_write', '=', True]]</field>
@@ -332,10 +355,69 @@
     </field>
 </record>
 
-<record id="documents_partner" model="ir.actions.act_window">
+<record id="documents_partner_kanban" model="ir.actions.act_window">
 	<field name="name">Partner</field>
 	<field name="res_model">muk_quality_docs.document</field>
-	<field name="view_mode">kanban,tree,form</field>
+	<field name="view_mode">kanban,tree,graph,pivot,form</field>
+	<field name="target">main</field>
+	<field name="search_view_id" ref="documents_search" />
+	<field name="domain">[['partner_id', '!=', False]]</field>
+	<field name="context">{'search_default_group_by_partner': 1, 'sidebar_action': 'sidebar_partner'}</field>
+	<field name="help" type="html">
+	    <p class="oe_view_nocontent_create">
+	      	Click to create a new document.
+	    </p>
+    </field>
+</record>
+
+<record id="documents_all_list" model="ir.actions.act_window">
+	<field name="name">All</field>
+	<field name="res_model">muk_quality_docs.document</field>
+	<field name="view_mode">tree,kanban,graph,pivot,form</field>
+	<field name="target">main</field>
+	<field name="search_view_id" ref="documents_search" />
+	<field name="context">{'sidebar_action': 'sidebar_all'}</field>
+	<field name="help" type="html">
+	    <p class="oe_view_nocontent_create">
+	      	Click to create a new document.
+	    </p>
+    </field>
+</record>
+
+<record id="documents_unread_list" model="ir.actions.act_window">
+	<field name="name">Inbox</field>
+	<field name="res_model">muk_quality_docs.document</field>
+	<field name="view_mode">tree,kanban,graph,pivot,form</field>
+	<field name="target">main</field>
+	<field name="search_view_id" ref="documents_search" />
+	<field name="domain">[['is_read', '=', False]]</field>
+	<field name="context">{'sidebar_action': 'sidebar_inbox'}</field>
+	<field name="help" type="html">
+	    <p class="oe_view_nocontent_create">
+	      	Click to create a new document.
+	    </p>
+    </field>
+</record>
+
+<record id="documents_editor_list" model="ir.actions.act_window">
+	<field name="name">Editor</field>
+	<field name="res_model">muk_quality_docs.document</field>
+	<field name="view_mode">tree,kanban,graph,pivot,form</field>
+	<field name="target">main</field>
+	<field name="search_view_id" ref="documents_search" />
+	<field name="domain">[['permission_write', '=', True]]</field>
+	<field name="context">{'sidebar_action': 'sidebar_editor'}</field>
+	<field name="help" type="html">
+	    <p class="oe_view_nocontent_create">
+	      	Click to create a new document.
+	    </p>
+    </field>
+</record>
+
+<record id="documents_partner_list" model="ir.actions.act_window">
+	<field name="name">Partner</field>
+	<field name="res_model">muk_quality_docs.document</field>
+	<field name="view_mode">tree,kanban,graph,pivot,form</field>
 	<field name="target">main</field>
 	<field name="search_view_id" ref="documents_search" />
 	<field name="domain">[['partner_id', '!=', False]]</field>

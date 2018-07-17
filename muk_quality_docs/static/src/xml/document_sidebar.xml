@@ -30,5 +30,17 @@
            	</t>
 		</div>
 	</t>
+	
+	<t t-name="muk_quality_docs.ListDocumentSidebar">
+		<div class="mk_quality_docs_sidebar_actions">
+        	<t t-foreach="data.actions" t-as="action">
+       			<a t-attf-id="sidebar_#{action.id}" href="#" data-toggle="tooltip" 
+       				t-att-title="action.tooltip" t-att-data-action="action.action">
+	        		<i t-att-class="action.icon" />
+            		<span t-if="action.badge" class="badge_icon"><t t-esc="action.badge" /></span>
+	        	</a>
+           	</t>
+		</div>
+	</t>
 
 </templates>

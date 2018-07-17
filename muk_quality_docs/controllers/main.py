@@ -26,32 +26,64 @@ _logger = logging.getLogger(__name__)
 
 class QualityController(http.Controller):
 
-    @http.route('/sidebar/muk_quality_docs_document', type='json', auth="user")
-    def sidebar_document(self, **kw):
+    @http.route('/sidebar/muk_quality_docs_document/kanban', type='json', auth="user")
+    def sidebar_document_kanban(self, **kw):
         return {
             'actions': [
                 {   
                     'id': 'all',
                     'tooltip': _("All"),
-                    'action': request.env.ref('muk_quality_docs.documents_all').id,
+                    'action': request.env.ref('muk_quality_docs.documents_all_kanban').id,
                     'icon': "fa fa-list",
                     'badge': request.env['muk_quality_docs.document'].search([], count=True) or 0,
                 }, {   
                     'id': 'inbox',
                     'tooltip': _("Inbox"),
-                    'action': request.env.ref('muk_quality_docs.documents_unread').id,
+                    'action': request.env.ref('muk_quality_docs.documents_unread_kanban').id,
                     'icon': "fa fa-inbox",
                     'badge': request.env['muk_quality_docs.document'].search([['is_read', '=', False]], count=True) or 0,
                 }, {   
                     'id': 'editor',
                     'tooltip': _("Editor"),
-                    'action': request.env.ref('muk_quality_docs.documents_editor').id,
+                    'action': request.env.ref('muk_quality_docs.documents_editor_kanban').id,
                     'icon': "fa fa-pencil",
                     'badge': request.env['muk_quality_docs.document'].search([['permission_write', '=', True]], count=True) or 0,
                 }, {   
                     'id': 'partner',
                     'tooltip': _("Partner"),
-                    'action': request.env.ref('muk_quality_docs.documents_partner').id,
+                    'action': request.env.ref('muk_quality_docs.documents_partner_kanban').id,
+                    'icon': "fa fa-user",
+                    'badge': request.env['muk_quality_docs.document'].search([['partner_id', '!=', False]], count=True) or 0,
+                }
+            ]
+        }
+        
+    @http.route('/sidebar/muk_quality_docs_document/list', type='json', auth="user")
+    def sidebar_document_list(self, **kw):
+        return {
+            'actions': [
+                {   
+                    'id': 'all',
+                    'tooltip': _("All"),
+                    'action': request.env.ref('muk_quality_docs.documents_all_list').id,
+                    'icon': "fa fa-list",
+                    'badge': request.env['muk_quality_docs.document'].search([], count=True) or 0,
+                }, {   
+                    'id': 'inbox',
+                    'tooltip': _("Inbox"),
+                    'action': request.env.ref('muk_quality_docs.documents_unread_list').id,
+                    'icon': "fa fa-inbox",
+                    'badge': request.env['muk_quality_docs.document'].search([['is_read', '=', False]], count=True) or 0,
+                }, {   
+                    'id': 'editor',
+                    'tooltip': _("Editor"),
+                    'action': request.env.ref('muk_quality_docs.documents_editor_list').id,
+                    'icon': "fa fa-pencil",
+                    'badge': request.env['muk_quality_docs.document'].search([['permission_write', '=', True]], count=True) or 0,
+                }, {   
+                    'id': 'partner',
+                    'tooltip': _("Partner"),
+                    'action': request.env.ref('muk_quality_docs.documents_partner_list').id,
                     'icon': "fa fa-user",
                     'badge': request.env['muk_quality_docs.document'].search([['partner_id', '!=', False]], count=True) or 0,
                 }

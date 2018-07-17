@@ -17,7 +17,7 @@
 *
 **********************************************************************************/
 
-odoo.define('muk_quality_docs.DocumentKanbanRenderer', function (require) {
+odoo.define('muk_quality_docs.DocumentListRenderer', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -25,13 +25,13 @@ var ajax = require('web.ajax');
 var config = require('web.config');
 var session = require('web.session');
 
-var KanbanRenderer = require('web.KanbanRenderer');
+var ListRenderer = require('web.ListRenderer');
 
 var _t = core._t;
 var QWeb = core.qweb;
 
-var DocumentKanbanRenderer = KanbanRenderer.extend({
-	custom_events: _.extend({}, KanbanRenderer.prototype.custom_events, {
+var DocumentListRenderer = ListRenderer.extend({
+	custom_events: _.extend({}, ListRenderer.prototype.custom_events, {
 		button_clicked: '_buttonClicked',
     }),
 	init: function (parent, state, params) {
@@ -51,7 +51,7 @@ var DocumentKanbanRenderer = KanbanRenderer.extend({
     	if(!config.device.isMobile) {
     		this.sidebar = $("<div>", {
 	    		class: "mk_quality_docs_document_sidebar",
-	    		html: $(QWeb.render('muk_quality_docs.KanbanDocumentSidebar', {
+	    		html: $(QWeb.render('muk_quality_docs.ListDocumentSidebar', {
 	                widget: this,
 	                data: this.kanban_sidebar,
 	            })),
@@ -68,7 +68,7 @@ var DocumentKanbanRenderer = KanbanRenderer.extend({
     _load_kanban_sidebar_data: function() {
     	var self = this;
     	return this._rpc({
-            route: '/sidebar/muk_quality_docs_document/kanban',
+            route: '/sidebar/muk_quality_docs_document/list',
         }).done(function(result) {
         	self.kanban_sidebar = _.extend({}, self.kanban_sidebar, result);
         });
@@ -94,6 +94,6 @@ var DocumentKanbanRenderer = KanbanRenderer.extend({
     },
 });
 
-return DocumentKanbanRenderer;
+return DocumentListRenderer;
 
 });
