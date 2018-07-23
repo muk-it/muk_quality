@@ -188,12 +188,7 @@ class Document(models.Model):
     @api.depends("read_ids")
     def _compute_is_read(self):
         for record in self:
-            read_ids = self.env["muk_quality_docs.read"].search([
-                "&",
-                ("document_id", "=", record.id),
-                ("user_id", "=", self.env.user.id)
-            ])
-            record.is_read = bool(read_ids)
+            record.is_read = self.env.user.id in record.read_ids.mapped("user_id.id")
                 
     def _compute_has_right_for_prev_stage(self):
         for record in self:
