@@ -288,13 +288,14 @@ class Document(models.Model):
     
     @api.multi
     def _search_is_read(self, operator, value):
-        records = []
         if operator == "=":
-            records = self.search([]).filtered(lambda r: r.is_read is value)
+            records = self.env["muk_quality_docs.read"].sudo().search([("user_id", "=", self.env.user.id)]).mapped("document_id.id")
+            return [('id', 'in', records)]
         elif operator == "!=":
-            records = self.search([]).filtered(lambda r: r.is_read is not value)
+            records = self.env["muk_quality_docs.read"].sudo().search([("user_id", "=", self.env.user.id)]).mapped("document_id.id")
+            return [('id', 'not in', records)]
+        return []
             
-        return [('id', 'in', [r.id for r in records])]
     
     @api.multi
     def _search_ref_and_name(self, operator, value):
