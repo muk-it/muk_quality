@@ -77,7 +77,7 @@ class Stage(models.Model):
     
     def _compute_next_stage_id(self):
         for record in self:
-            next_stage = self.suspend_security().search([("sequence", ">", record.sequence)])
+            next_stage = self.sudo().search([("sequence", ">", record.sequence)])
             if next_stage:
                 record.next_stage_id = next_stage[0]
             else:
@@ -85,7 +85,7 @@ class Stage(models.Model):
     
     def _compute_prev_stage_id(self):
         for record in self:
-            prev_stage = self.suspend_security().search([("sequence", "<", record.sequence)])
+            prev_stage = self.sudo().search([("sequence", "<", record.sequence)])
             if prev_stage:
                 record.prev_stage_id = prev_stage[-1]
             else:
