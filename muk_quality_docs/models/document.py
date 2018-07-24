@@ -188,7 +188,7 @@ class Document(models.Model):
     @api.depends("read_ids")
     def _compute_is_read(self):
         for record in self:
-            record.is_read = self.env.user.id in record.read_ids.mapped("user_id.id")
+            record.is_read = self.env.user.id in record.sudo().read_ids.mapped("user_id.id")
                 
     def _compute_has_right_for_prev_stage(self):
         for record in self:
