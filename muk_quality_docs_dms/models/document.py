@@ -69,7 +69,7 @@ class Document(models.Model):
             return False
         valid_chars = "-_.() %s%sÄäÜüÖöß" % (string.ascii_letters, string.digits)
         viewer_file_name = "".join(c for c in self.ref_and_name if c in valid_chars)
-        return "{}-{}.{}{}".format(_("Viewer"), viewer_file_name, self.id, self.viewer_file_ext)
+        return "{}-{}.{}{}".format(_("V"), viewer_file_name, self.id, self.viewer_file_ext)
     
     def _get_viewer_file_directory(self):
         try:

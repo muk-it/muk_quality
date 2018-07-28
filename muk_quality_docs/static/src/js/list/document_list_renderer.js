@@ -36,7 +36,7 @@ var DocumentListRenderer = ListRenderer.extend({
     }),
 	init: function (parent, state, params) {
 		this._super.apply(this, arguments);
-		this.kanban_sidebar = {}
+		this.kanban_sidebar = {};
 	},
 	willStart: function () {
 		var load_sidebar = this._load_kanban_sidebar_data();

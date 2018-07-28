@@ -33,10 +33,10 @@ var QWeb = core.qweb;
 var DocumentFormRenderer = FormRenderer.extend({
 	_renderHeaderButton: function (node) {
 		if(node.attrs.name === "set_stage_to_next" && this.state.data.next_stage_name) {
-			node.attrs.string = _t("Backward to ") + this.state.data.next_stage_name;
+			node.attrs.string = _t("Forward to ") + this.state.data.next_stage_name;
 		}
 		if(node.attrs.name === "set_stage_to_prev" && this.state.data.prev_stage_name) {
-			node.attrs.string = _t("Forward to ") + this.state.data.prev_stage_name;
+			node.attrs.string = _t("Backward to ") + this.state.data.prev_stage_name;
 		}
 		return this._super(node);
 	},
