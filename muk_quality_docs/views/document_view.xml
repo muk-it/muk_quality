@@ -255,7 +255,7 @@
 						</group>
 					</sheet>
 					
-					<sheet string="Already read by" name="sheet_already_read_by" groups="muk_quality_docs.group_muk_quality_docs_manager" >
+					<sheet string="Readers" name="sheet_already_read_by" groups="muk_quality_docs.group_muk_quality_docs_manager" >
 						<div class="muk_quality_docs_explanation bg-info">
 							List of all users who have already read this document.
 						</div>

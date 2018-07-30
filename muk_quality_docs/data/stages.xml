@@ -25,6 +25,7 @@
 	<field name="sequence" eval="10" />
 	<field name="has_write_access_for_authors" eval="True" />
 	<field name="has_write_access_for_managers" eval="True" />
+	<field name="has_read_access_for_authors" eval="True" />
 </record>
 
 <record id="toclear" model="muk_quality_docs.stage">
@@ -37,12 +38,14 @@
 	<field name="name">Cleared</field>
 	<field name="sequence" eval="30" />
 	<field name="has_read_access_for_users" eval="True" />
+	<field name="has_read_access_for_authors" eval="True" />
 </record>
 
 <record id="valid" model="muk_quality_docs.stage">
 	<field name="name">Valid</field>
 	<field name="sequence" eval="40" />
 	<field name="has_read_access_for_users" eval="True" />
+	<field name="has_read_access_for_authors" eval="True" />
 </record>
 
 <record id="expired" model="muk_quality_docs.stage">
