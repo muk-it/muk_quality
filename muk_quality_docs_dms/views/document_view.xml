@@ -47,8 +47,9 @@
 	<field name="inherit_id" ref="muk_quality_docs.documents_list"/>
 	<field name="arch" type="xml">
 	    <xpath expr="//field[@name='create_date']" position="after">
-	    	<field name="preview_name" invisible="1" />
-	    	<field name="preview_binary" widget="binary" filename="preview_name" />
+	    	<!-- FIXME: bin_size: True in context gets lost -->
+<!-- 	    	<field name="preview_name" invisible="1" /> -->
+<!-- 	    	<field name="preview_binary" widget="binary" filename="preview_name" /> -->
 		</xpath>
     </field>
 </record>
