@@ -35,25 +35,29 @@ class QualityController(http.Controller):
                     'tooltip': _("All"),
                     'action': request.env.ref('muk_quality_docs.documents_all_kanban').id,
                     'icon': "fa fa-list",
-                    'badge': request.env['muk_quality_docs.document'].search([], count=True) or 0,
+                    'badge': 0, # Fixme
+                    #'badge': request.env['muk_quality_docs.document'].search([], count=True) or 0,
                 }, {   
                     'id': 'inbox',
                     'tooltip': _("Inbox"),
                     'action': request.env.ref('muk_quality_docs.documents_unread_kanban').id,
                     'icon': "fa fa-inbox",
-                    'badge': request.env['muk_quality_docs.document'].search([['is_read', '=', False]], count=True) or 0,
+                    'badge': 0, # Fixme
+                    #'badge': request.env['muk_quality_docs.document'].search([['is_read', '=', False]], count=True) or 0,
                 }, {   
                     'id': 'editor',
                     'tooltip': _("Editor"),
                     'action': request.env.ref('muk_quality_docs.documents_editor_kanban').id,
                     'icon': "fa fa-pencil",
-                    'badge': request.env['muk_quality_docs.document'].search([['permission_write', '=', True]], count=True) or 0,
+                    'badge': 0, # Fixme
+                    #'badge': request.env['muk_quality_docs.document'].search([['permission_write', '=', True]], count=True) or 0,
                 }, {   
                     'id': 'partner',
                     'tooltip': _("Partner"),
                     'action': request.env.ref('muk_quality_docs.documents_partner_kanban').id,
                     'icon': "fa fa-user",
-                    'badge': request.env['muk_quality_docs.document'].search([['partner_id', '!=', False]], count=True) or 0,
+                    'badge': 0, # Fixme
+                    #'badge': request.env['muk_quality_docs.document'].search([['partner_id', '!=', False]], count=True) or 0,
                 }
             ]
         }
@@ -67,25 +71,29 @@ class QualityController(http.Controller):
                     'tooltip': _("All"),
                     'action': request.env.ref('muk_quality_docs.documents_all_list').id,
                     'icon': "fa fa-list",
-                    'badge': request.env['muk_quality_docs.document'].search([], count=True) or 0,
+                    'badge': 0, # Fixme
+                    #'badge': request.env['muk_quality_docs.document'].search([], count=True) or 0,
                 }, {   
                     'id': 'inbox',
                     'tooltip': _("Inbox"),
                     'action': request.env.ref('muk_quality_docs.documents_unread_list').id,
                     'icon': "fa fa-inbox",
-                    'badge': request.env['muk_quality_docs.document'].search([['is_read', '=', False]], count=True) or 0,
+                    'badge': 0, # Fixme
+                    #'badge': request.env['muk_quality_docs.document'].search([['is_read', '=', False]], count=True) or 0,
                 }, {   
                     'id': 'editor',
                     'tooltip': _("Editor"),
                     'action': request.env.ref('muk_quality_docs.documents_editor_list').id,
                     'icon': "fa fa-pencil",
-                    'badge': request.env['muk_quality_docs.document'].search([['permission_write', '=', True]], count=True) or 0,
+                    'badge': 0, # Fixme
+                    #'badge': request.env['muk_quality_docs.document'].search([['permission_write', '=', True]], count=True) or 0,
                 }, {   
                     'id': 'partner',
                     'tooltip': _("Partner"),
                     'action': request.env.ref('muk_quality_docs.documents_partner_list').id,
                     'icon': "fa fa-user",
-                    'badge': request.env['muk_quality_docs.document'].search([['partner_id', '!=', False]], count=True) or 0,
+                    'badge': 0, # Fixme
+                    #'badge': request.env['muk_quality_docs.document'].search([['partner_id', '!=', False]], count=True) or 0,
                 }
             ]
         }
