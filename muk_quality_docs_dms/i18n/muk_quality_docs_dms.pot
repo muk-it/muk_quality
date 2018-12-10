@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0\n"
+"Project-Id-Version: Odoo Server 11.0-20180122\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-01 12:42+0000\n"
-"PO-Revision-Date: 2018-07-01 12:42+0000\n"
+"POT-Creation-Date: 2018-12-10 11:18+0000\n"
+"PO-Revision-Date: 2018-12-10 11:18+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -118,6 +118,11 @@ msgstr ""
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_viewer_file_directory
 msgid "Folder where controlled document viewer files are saved in."
+msgstr ""
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_has_preview
+msgid "Has Preview"
 msgstr ""
 
 #. module: muk_quality_docs_dms

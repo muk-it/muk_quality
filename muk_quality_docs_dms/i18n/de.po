@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0\n"
+"Project-Id-Version: Odoo Server 11.0-20180122\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-01 12:44+0000\n"
-"PO-Revision-Date: 2018-07-13 13:10+0200\n"
+"POT-Creation-Date: 2018-12-10 11:19+0000\n"
+"PO-Revision-Date: 2018-12-10 12:40+0100\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 "Language: de\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #. module: muk_quality_docs_dms
 #: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
@@ -61,17 +61,17 @@ msgstr "Name der Dokumentdatei"
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template_document_viewer_file
 msgid "Document Viewer File"
-msgstr "Dokument-Viewer-Datei"
+msgstr "Dokument-PDF-Datei"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template_document_viewer_file_ext
 msgid "Document Viewer File Extension"
-msgstr "Document Viewer Dateierweiterung"
+msgstr "Document PDF Dateierweiterung"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template_document_viewer_file_name
 msgid "Document Viewer File Name"
-msgstr "Dokument-Viewer-Dateiname"
+msgstr "Dokument-PDF-Dateiname"
 
 #. module: muk_quality_docs_dms
 #: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
@@ -115,12 +115,17 @@ msgstr "Speicherort für Vorlagen"
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_template_viewer_file_directory
 msgid "Folder where controlled document template viewer files are saved in."
-msgstr "Speicherort für Vorlagen Viewer Dateien"
+msgstr "Speicherort für Vorlagen PDF Dateien"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_viewer_file_directory
 msgid "Folder where controlled document viewer files are saved in."
-msgstr "Speicherort für gelenkte Dokumenten-Viewer-Datei"
+msgstr "Speicherort für gelenkte Dokumenten-PDF-Datei"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_has_preview
+msgid "Has Preview"
+msgstr "hat Vorschau"
 
 #. module: muk_quality_docs_dms
 #: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
@@ -162,35 +167,35 @@ msgstr "Speicherort für Vorlagen"
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings_template_viewer_file_directory
 msgid "Template Viewer File Directory"
-msgstr "Speicherort für Vorlagen-Viewer-Dateien"
+msgstr "Speicherort für Vorlagen-PDF-Dateien"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_user_can_only_see_viewer_file
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings_user_can_only_see_viewer_file
 msgid "User Can Only See Viewer File"
-msgstr "Benutzer kann nur Viewer-Datei sehen"
+msgstr "Benutzer kann nur PDF-Datei sehen"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_user_can_only_see_viewer_file
 msgid "User can only see viewer file (if one is provided)."
-msgstr "Der Benutzer kann nur die Viewer-Datei sehen (falls vorhanden)."
+msgstr "Benutzer können nur die PDF-Datei sehen (falls vorhanden)."
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_viewer_file
 #: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
 #: model:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
 msgid "Viewer File"
-msgstr "Viewer-Datei"
+msgstr "PDF-Datei"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings_viewer_file_directory
 msgid "Viewer File Directory"
-msgstr "Viewer-Dateiverzeichnis"
+msgstr "PDF-Dateiverzeichnis"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_viewer_file_name
 msgid "Viewer File Name"
-msgstr "Viewer-Dateiname"
+msgstr "PDF-Dateiname"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model,name:muk_quality_docs_dms.model_res_config_settings
