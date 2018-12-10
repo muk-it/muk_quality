@@ -20,7 +20,7 @@
 {
     "name": "MuK QMS Documents Human Resources",
     "summary": """Human Resources Extension""",
-    "version": "11.0.1.0.2",
+    "version": "11.0.1.0.3",
     "category": "Extra Tools",
     "license": "AGPL-3",
     "website": "http://www.mukit.at",
