@@ -230,16 +230,14 @@
 							Set specific permissions on who can see or write on this document. This permissions can only limit the
 							access rights set in the stages and not extend them.
 						</div>
-						<group>
-							<field name="groups">
-								<tree create="false">
-									<field name="name" />
-									<field name="perm_read" />
-									<field name="perm_write" />
-									<field name="count_users" />
-								</tree>
-							</field>
-						</group>
+						<field name="groups">
+							<tree create="false">
+								<field name="name" />
+								<field name="perm_read" />
+								<field name="perm_write" />
+								<field name="count_users" />
+							</tree>
+						</field>
 						
 					</sheet>
 					

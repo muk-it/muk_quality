@@ -74,9 +74,14 @@
 						<div class="muk_quality_docs_explanation bg-info">
 							Set specific permissions on who can see or write on this template. Permissions will be copied into created documents.
 						</div>
-						<group>
-							<field name="groups" />
-						</group>
+						<field name="groups">
+							<tree create="false">
+								<field name="name" />
+								<field name="perm_read" />
+								<field name="perm_write" />
+								<field name="count_users" />
+							</tree>
+						</field>
 					</sheet>
 					
 					<sheet string="Technical Information" name="sheet_technical_information" groups="base.group_no_one" >
