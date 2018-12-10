@@ -629,7 +629,7 @@ msgstr ""
 #. module: muk_quality_docs
 #: model:ir.ui.view,arch_db:muk_quality_docs.template_form
 msgid "Set specific permissions on who can see or write on this template. Permissions will be copied into created documents."
-msgstr "Legen Sie Berechtigungen fest, wer diese Vorlage lesen oder schreiben darf. Diese Berechtigungen werden in die erstellten Dokumente kopiert."
+msgstr "Legen Sie fest, wer diese Vorlage lesen oder schreiben darf. Diese Berechtigungen werden in die erstellten Dokumente kopiert."
 
 #. module: muk_quality_docs
 #: model:ir.ui.menu,name:muk_quality_docs.menu_muk_quality_docs_settings
