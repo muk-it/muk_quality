@@ -231,7 +231,7 @@
 							access rights set in the stages and not extend them.
 						</div>
 						<field name="groups">
-							<tree create="false">
+							<tree>
 								<field name="name" />
 								<field name="perm_read" />
 								<field name="perm_write" />
