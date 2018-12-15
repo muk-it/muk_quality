@@ -20,7 +20,7 @@
 {
     "name": "MuK QMS Documents",
     "summary": """Quality Management System""",
-    "version": "11.0.1.1.13",
+    "version": "11.0.1.1.14",
     "author": "MuK IT",
     "category": "Document Management",
     "license": "AGPL-3",
