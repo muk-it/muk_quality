@@ -1,7 +1,7 @@
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Build Status](https://travis-ci.org/muk-it/muk_quality.svg?branch=12.0)](https://travis-ci.org/muk-it/muk_quality)
 [![codecov](https://codecov.io/gh/muk-it/muk_quality/branch/12.0/graph/badge.svg)](https://codecov.io/gh/muk-it/muk_quality)
-[![Demo](https://img.shields.io/badge/demo-Try%20me-243742.svg)](https://demo.mukit.at/)
+[![Demo](https://img.shields.io/badge/demo-Try%20me-243742.svg)](https://mukit.at/r/SgN)
 
 # MuK Odoo QMS Modules
 
