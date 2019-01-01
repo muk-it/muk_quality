@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--     
+	Copyright (C) 2017 MuK IT GmbH
+	
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+-->
+
+
+<odoo>
+
+<record id="created" model="muk_quality_docs.stage">
+	<field name="name">Created</field>
+	<field name="sequence" eval="10" />
+	<field name="has_write_access_for_authors" eval="True" />
+	<field name="has_write_access_for_managers" eval="True" />
+	<field name="has_read_access_for_authors" eval="True" />
+</record>
+
+<record id="toclear" model="muk_quality_docs.stage">
+	<field name="name">To Clear</field>
+	<field name="sequence" eval="20" />
+	<field name="has_write_access_for_managers" eval="True" />
+</record>
+
+<record id="cleared" model="muk_quality_docs.stage">
+	<field name="name">Cleared</field>
+	<field name="sequence" eval="30" />
+	<field name="has_read_access_for_users" eval="True" />
+	<field name="has_read_access_for_authors" eval="True" />
+</record>
+
+<record id="valid" model="muk_quality_docs.stage">
+	<field name="name">Valid</field>
+	<field name="sequence" eval="40" />
+	<field name="has_read_access_for_users" eval="True" />
+	<field name="has_read_access_for_authors" eval="True" />
+</record>
+
+<record id="expired" model="muk_quality_docs.stage">
+	<field name="name">Expired</field>
+	<field name="sequence" eval="50" />
+</record>
+            
+</odoo>
+

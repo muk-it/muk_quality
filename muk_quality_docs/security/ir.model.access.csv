@@ -1,0 +1,17 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+
+document_manager,document for manager,muk_quality_docs.model_muk_quality_docs_document,group_muk_quality_docs_manager,1,1,1,1
+read_manager,read for manager,muk_quality_docs.model_muk_quality_docs_read,group_muk_quality_docs_manager,1,0,1,1
+stage_manager,stage for manager,muk_quality_docs.model_muk_quality_docs_stage,group_muk_quality_docs_manager,1,1,1,1
+template_manager,template for manager,muk_quality_docs.model_muk_quality_docs_template,group_muk_quality_docs_manager,1,1,1,1
+groups_manager,groups for manager,muk_quality_docs.model_muk_quality_docs_groups,group_muk_quality_docs_manager,1,1,1,1
+
+document_author,document for author,muk_quality_docs.model_muk_quality_docs_document,group_muk_quality_docs_author,1,1,1,0
+read_author,read for author,muk_quality_docs.model_muk_quality_docs_read,group_muk_quality_docs_author,1,0,1,1
+template_author,template for author,muk_quality_docs.model_muk_quality_docs_template,group_muk_quality_docs_author,1,0,0,0
+groups_author,groups for author,muk_quality_docs.model_muk_quality_docs_groups,group_muk_quality_docs_author,1,0,0,0
+
+document_user,document for user,muk_quality_docs.model_muk_quality_docs_document,group_muk_quality_docs_user,1,0,0,0
+stage_user,stage for user,muk_quality_docs.model_muk_quality_docs_stage,group_muk_quality_docs_user,1,0,0,0
+read_user,read for user,muk_quality_docs.model_muk_quality_docs_read,group_muk_quality_docs_user,1,0,1,1
+groups_user,groups for user,muk_quality_docs.model_muk_quality_docs_groups,group_muk_quality_docs_user,1,0,0,0

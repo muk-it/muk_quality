@@ -1,0 +1,17 @@
+id,name,sequence,has_write_access_for_managers,has_write_access_for_authors,has_read_access_for_authors,has_read_access_for_users
+test_stage_01,Test Stage 01,1001,False,False,False,False
+test_stage_02,Test Stage 02,1002,False,False,False,True
+test_stage_03,Test Stage 03,1003,False,False,True,False
+test_stage_04,Test Stage 04,1004,False,False,True,True
+test_stage_05,Test Stage 05,1005,False,True,False,False
+test_stage_06,Test Stage 06,1006,False,True,False,True
+test_stage_07,Test Stage 07,1007,False,True,True,False
+test_stage_08,Test Stage 08,1008,False,True,True,True
+test_stage_09,Test Stage 09,1009,True,False,False,False
+test_stage_10,Test Stage 10,1010,True,False,False,True
+test_stage_11,Test Stage 11,1011,True,False,True,False
+test_stage_12,Test Stage 12,1012,True,False,True,True
+test_stage_13,Test Stage 13,1013,True,True,False,False
+test_stage_14,Test Stage 14,1014,True,True,False,True
+test_stage_15,Test Stage 15,1015,True,True,True,False
+test_stage_16,Test Stage 16,1016,True,True,True,True
