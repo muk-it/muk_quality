@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--     
+	Copyright (C) 2017 MuK IT GmbH
+	
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+-->
+
+<odoo>
+
+<record id="template_form_dms" model="ir.ui.view">
+	<field name="name">muk_quality_docs.template.form.dms</field>
+	<field name="model">muk_quality_docs.template</field>
+	<field name="priority" eval="20"/>
+	<field name="inherit_id" ref="muk_quality_docs.template_form"/>
+	<field name="arch" type="xml">
+	    <xpath expr="//group[@name='group_main_right']" position="inside">
+            <field name="document_file" filename="document_file_name" />
+            <field name="document_viewer_file" filename="document_viewer_file_name" />
+		</xpath>
+	    <xpath expr="//sheet[@name='sheet_technical_information']" position="inside">
+	    	<group>
+	    		<group string="File">
+					<field name="document_file_ext" string="Extension" />
+					<field name="document_file_name" string="Name" />
+	    		</group>
+	    		<group string="Viewer File">
+					<field name="document_viewer_file_ext" string="Extension" />
+					<field name="document_viewer_file_name" string="Name" />
+	    		</group>
+	    	</group>
+		</xpath>
+		<xpath expr="//sheet[@name='sheet_content']" position="attributes">
+			<attribute name="string">Description</attribute>
+		</xpath>
+		<xpath expr="//sheet[@name='sheet_content']/div[@name='content_description']" position="replace">
+			<div class="muk_quality_docs_explanation bg-info" name="content_description">
+				Description that will be copied in every created document.
+			</div>
+		</xpath>
+    </field>
+</record>
+
+</odoo>

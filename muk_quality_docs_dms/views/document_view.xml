@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--     
+	Copyright (C) 2017 MuK IT GmbH
+	
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+-->
+
+<odoo>
+
+<record id="documents_kanban_dms" model="ir.ui.view">
+	<field name="name">muk_quality_docs.document.kanban.dms</field>
+	<field name="model">muk_quality_docs.document</field>
+	<field name="inherit_id" ref="muk_quality_docs.documents_kanban"/>
+	<field name="arch" type="xml">
+		<xpath expr="//kanban//templates" position="before">
+			<field name="preview_name"/>
+			<field name="has_preview"/>
+		</xpath>
+		<xpath expr="//div[@class='oe_kanban_bottom_left']" position="inside">
+			<t t-if="record.has_preview.raw_value">
+            	<button title="Preview" class="o_icon_button mk_quality_docs_preview"
+            		t-att-data-filename="record.preview_name.raw_value" data-field="preview_binary"
+            		data-filename_field="preview_name" t-att-data-id="record.id.raw_value">
+             		<i class="fa fa-file-text-o"></i>
+            	</button>
+        	</t>
+		</xpath>
+	</field>
+</record>
+
+<record id="documents_list_dms" model="ir.ui.view">
+	<field name="name">muk_quality_docs.document.tree.dms</field>
+	<field name="model">muk_quality_docs.document</field>
+	<field name="priority" eval="20"/>
+	<field name="inherit_id" ref="muk_quality_docs.documents_list"/>
+	<field name="arch" type="xml">
+	    <xpath expr="//field[@name='create_date']" position="after">
+	    	<!-- FIXME: bin_size: True in context gets lost -->
+<!-- 	    	<field name="preview_name" invisible="1" /> -->
+<!-- 	    	<field name="preview_binary" widget="binary" filename="preview_name" /> -->
+		</xpath>
+    </field>
+</record>
+
+<record id="document_form_dms" model="ir.ui.view">
+	<field name="name">muk_quality_docs.document.form.dms</field>
+	<field name="model">muk_quality_docs.document</field>
+	<field name="priority" eval="20"/>
+	<field name="inherit_id" ref="muk_quality_docs.document_form"/>
+	<field name="arch" type="xml">
+	    <xpath expr="//group[@name='group_main_right']" position="inside">
+            <field name="file" filename="file_name" 
+            	attrs="{'invisible':[('user_can_only_see_viewer_file','=',True)]}"/>
+            <field name="viewer_file" filename="viewer_file_name" />
+		</xpath>
+	    <xpath expr="//sheet[@name='sheet_technical_information']" position="inside">
+	    	<group string="DMS">
+	    		<field name="user_can_only_see_viewer_file" />
+	    		<field name="has_preview" />
+	    	</group>
+	    	<group>
+	    		<group string="File">
+					<field name="file_ext" string="Extension" />
+					<field name="file_name" string="Name" />
+	    		</group>
+	    		<group string="Viewer File">
+					<field name="viewer_file_ext" string="Extension" />
+					<field name="viewer_file_name" string="Name" />
+	    		</group>
+	    	</group>
+		</xpath>
+		<xpath expr="//sheet[@name='sheet_content']" position="attributes">
+			<attribute name="string">Description</attribute>
+		</xpath>
+		<xpath expr="//sheet[@name='sheet_content']" position="after">
+			<sheet string="Preview" attrs="{'invisible': [('has_preview', '=', False)]}">
+				<field name="preview_name" invisible="1" />
+				<field name="preview_binary" widget="preview_binary" filename="preview_name" />
+			</sheet>
+		</xpath>
+		<xpath expr="//sheet[@name='sheet_content']/div[@name='content_description']" position="replace">
+			<div class="muk_quality_docs_explanation bg-info" name="content_description">
+				Description of the document.
+			</div>
+		</xpath>
+    </field>
+</record>
+
+</odoo>

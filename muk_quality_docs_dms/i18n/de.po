@@ -1,0 +1,203 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* muk_quality_docs_dms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20180122\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-10 11:19+0000\n"
+"PO-Revision-Date: 2018-12-10 12:40+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: de\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#. module: muk_quality_docs_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
+msgid "DMS"
+msgstr "DMS"
+
+#. module: muk_quality_docs_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
+msgid "Description"
+msgstr "Beschreibung"
+
+#. module: muk_quality_docs_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
+msgid "Description of the document."
+msgstr "Beschreibung des Dokuments."
+
+#. module: muk_quality_docs_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
+msgid "Description that will be copied in every created document."
+msgstr "Beschreibung, die in jedes erstellte Dokument kopiert wird."
+
+#. module: muk_quality_docs_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.res_config_settings_view_form
+msgid "Directory Settings"
+msgstr "Verzeichnis-Einstellungen"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template_document_file
+msgid "Document File"
+msgstr "Dokument-Datei"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template_document_file_ext
+msgid "Document File Extension"
+msgstr "Dokument-Dateierweiterung"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template_document_file_name
+msgid "Document File Name"
+msgstr "Name der Dokumentdatei"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template_document_viewer_file
+msgid "Document Viewer File"
+msgstr "Dokument-PDF-Datei"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template_document_viewer_file_ext
+msgid "Document Viewer File Extension"
+msgstr "Document PDF Dateierweiterung"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template_document_viewer_file_name
+msgid "Document Viewer File Name"
+msgstr "Dokument-PDF-Dateiname"
+
+#. module: muk_quality_docs_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
+msgid "Extension"
+msgstr "Erweiterung"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_file
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
+msgid "File"
+msgstr "Datei"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings_file_directory
+msgid "File Directory"
+msgstr "Dateiverzeichnis"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_file_ext
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_viewer_file_ext
+msgid "File Extension"
+msgstr "Dateierweiterung"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_file_name
+msgid "File Name"
+msgstr "Dateiname"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_file_directory
+msgid "Folder where controlled document files are saved in."
+msgstr "Speicherort für gelenkte Dokumente"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_template_file_directory
+msgid "Folder where controlled document template files are saved in."
+msgstr "Speicherort für Vorlagen"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_template_viewer_file_directory
+msgid "Folder where controlled document template viewer files are saved in."
+msgstr "Speicherort für Vorlagen PDF Dateien"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_viewer_file_directory
+msgid "Folder where controlled document viewer files are saved in."
+msgstr "Speicherort für gelenkte Dokumenten-PDF-Datei"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_has_preview
+msgid "Has Preview"
+msgstr "hat Vorschau"
+
+#. module: muk_quality_docs_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
+msgid "Name"
+msgstr "Name"
+
+#. module: muk_quality_docs_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.documents_kanban_dms
+msgid "Preview"
+msgstr "Vorschau"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_preview_binary
+msgid "Preview Binary"
+msgstr "Vorschau Binär"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_preview_name
+msgid "Preview Name"
+msgstr "Vorschauname"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model,name:muk_quality_docs_dms.model_muk_quality_docs_document
+msgid "QMS Document"
+msgstr "QMS-Dokument"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model,name:muk_quality_docs_dms.model_muk_quality_docs_template
+msgid "QMS Template"
+msgstr "QMS-Vorlage"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings_template_file_directory
+msgid "Template File Directory"
+msgstr "Speicherort für Vorlagen"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings_template_viewer_file_directory
+msgid "Template Viewer File Directory"
+msgstr "Speicherort für Vorlagen-PDF-Dateien"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_user_can_only_see_viewer_file
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings_user_can_only_see_viewer_file
+msgid "User Can Only See Viewer File"
+msgstr "Benutzer kann nur PDF-Datei sehen"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings_user_can_only_see_viewer_file
+msgid "User can only see viewer file (if one is provided)."
+msgstr "Benutzer können nur die PDF-Datei sehen (falls vorhanden)."
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_viewer_file
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
+#: model:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
+msgid "Viewer File"
+msgstr "PDF-Datei"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings_viewer_file_directory
+msgid "Viewer File Directory"
+msgstr "PDF-Dateiverzeichnis"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document_viewer_file_name
+msgid "Viewer File Name"
+msgstr "PDF-Dateiname"
+
+#. module: muk_quality_docs_dms
+#: model:ir.model,name:muk_quality_docs_dms.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"
