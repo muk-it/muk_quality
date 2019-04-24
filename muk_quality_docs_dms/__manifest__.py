@@ -20,7 +20,7 @@
 {
     "name": "MuK QMS Documents DMS Support",
     "summary": """Quality Management System DMS Support""",
-    "version": "12.0.1.0.5",
+    "version": "12.0.1.0.6",
     "author": "MuK IT",
     "category": "Document Management",
     "license": "AGPL-3",

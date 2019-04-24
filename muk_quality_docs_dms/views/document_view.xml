@@ -84,17 +84,17 @@
 		<xpath expr="//sheet[@name='sheet_content']" position="attributes">
 			<attribute name="string">Description</attribute>
 		</xpath>
-		<xpath expr="//sheet[@name='sheet_content']" position="after">
-			<sheet string="Preview" attrs="{'invisible': [('has_preview', '=', False)]}">
-				<field name="preview_name" invisible="1" />
-				<field name="preview_binary" widget="preview_binary" filename="preview_name" />
-			</sheet>
-		</xpath>
 		<xpath expr="//sheet[@name='sheet_content']/div[@name='content_description']" position="replace">
 			<div class="muk_quality_docs_explanation bg-info" name="content_description">
 				Description of the document.
 			</div>
 		</xpath>
+		<xpath expr="//sheet" position="after">
+			<div class="mk_preview_sidebar" attrs="{'invisible': [('has_preview', '=', False)]}" >
+				<field name="preview_name" invisible="1" />
+			    <field name="preview_binary" filename="preview_name" widget="binary_preview" />
+			</div>
+    	</xpath>
     </field>
 </record>
 
