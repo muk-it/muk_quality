@@ -1,6 +1,8 @@
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Build Status](https://travis-ci.org/muk-it/muk_quality.svg?branch=12.0)](https://travis-ci.org/muk-it/muk_quality)
 [![codecov](https://codecov.io/gh/muk-it/muk_quality/branch/12.0/graph/badge.svg)](https://codecov.io/gh/muk-it/muk_quality)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/410a58134cc446538a3edf01b56a9b95)](https://www.codacy.com/app/keshrath/muk_quality?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=muk-it/muk_quality&amp;utm_campaign=Badge_Grade)
+[![Weblate](https://weblate.mukit.at/widgets/quality-12/-/svg-badge.svg)](https://weblate.mukit.at/projects/quality-12/)
 [![Demo](https://img.shields.io/badge/demo-Try%20me-243742.svg)](https://mukit.at/r/SgN)
 
 # MuK Odoo QMS Modules
