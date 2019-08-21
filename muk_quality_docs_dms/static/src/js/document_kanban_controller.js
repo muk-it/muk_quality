@@ -26,8 +26,8 @@ odoo.define('muk_quality_docs_dms.DocumentKanbanController', function (require) 
 var core = require('web.core');
 var session = require('web.session');
 
-var PreviewDialog = require('muk_preview.PreviewDialog');
-var PreviewManager = require('muk_preview.PreviewManager');
+//var PreviewDialog = require('muk_preview.PreviewDialog');
+//var PreviewManager = require('muk_preview.PreviewManager');
 var DocumentKanbanController = require('muk_quality_docs.DocumentKanbanController');
 
 var _t = core._t;
@@ -38,14 +38,14 @@ DocumentKanbanController.include({
 		show_preview: '_showPreview',
     }),
     _showPreview: function(ev) {
-    	var preview = new PreviewDialog(
-    		this, [{
-    			url: ev.data.url,
-    			filename: ev.data.filename,
-    			mimetype: ev.data.mimetype,
-    		}], 0
-        );
-    	preview.appendTo(this.$('.mk_quality_docs_document_kanban'));
+//    	var preview = new PreviewDialog(
+//    		this, [{
+//    			url: ev.data.url,
+//    			filename: ev.data.filename,
+//    			mimetype: ev.data.mimetype,
+//    		}], 0
+//        );
+//    	preview.appendTo(this.$('.mk_quality_docs_document_kanban'));
     }
 });
 

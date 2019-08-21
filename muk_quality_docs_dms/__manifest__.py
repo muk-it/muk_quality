@@ -23,15 +23,16 @@
 {
     "name": "MuK QMS Documents DMS Support",
     "summary": """Quality Management System DMS Support""",
-    "version": "12.0.2.0.0",
+    "version": "12.0.2.0.1",
     "author": "MuK IT",
     "category": "Document Management",
     "license": "LGPL-3",
     "website": "http://www.mukit.at",
     'live_test_url': 'https://mukit.at/r/SgN',
     "depends": [
-        'muk_quality_docs',
+        "muk_quality_docs",
         "muk_dms_field",
+        "muk_web_preview",
     ],
     "contributors": [
         "Kerrim Abdelhamed <kerrim.abdelhamed@mukit.at>",
