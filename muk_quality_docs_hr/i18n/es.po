@@ -18,10 +18,10 @@ msgstr ""
 #. module: muk_quality_docs_hr
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_hr.view_quality_docs_groups_form
 msgid "Departments"
-msgstr ""
+msgstr "Departamentos"
 
 #. module: muk_quality_docs_hr
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_hr.view_quality_docs_groups_form
 msgid "Jobs"
-msgstr ""
+msgstr "Empleos"
 

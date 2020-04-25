@@ -18,184 +18,184 @@ msgstr ""
 #. module: muk_quality_docs_dms
 #: model:ir.model,name:muk_quality_docs_dms.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Opciones de Configuración"
 
 #. module: muk_quality_docs_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
 msgid "DMS"
-msgstr ""
+msgstr "SGD"
 
 #. module: muk_quality_docs_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #. module: muk_quality_docs_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
 msgid "Description of the document."
-msgstr ""
+msgstr "Descripción del documento."
 
 #. module: muk_quality_docs_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
 msgid "Description that will be copied in every created document."
-msgstr ""
+msgstr "Descripción que se copiará en cada documento creado."
 
 #. module: muk_quality_docs_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.res_config_settings_view_form
 msgid "Directory Settings"
-msgstr ""
+msgstr "Configuraciones de carpetas"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template__document_file
 msgid "Document File"
-msgstr ""
+msgstr "Archivo de documento"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template__document_file_ext
 msgid "Document File Extension"
-msgstr ""
+msgstr "Extensión de archivo de documento"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template__document_file_name
 msgid "Document File Name"
-msgstr ""
+msgstr "Nombre del archivo del documento"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template__document_viewer_file
 msgid "Document Viewer File"
-msgstr ""
+msgstr "Archivo de visor de documentos"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template__document_viewer_file_ext
 msgid "Document Viewer File Extension"
-msgstr ""
+msgstr "Extensión de archivo del visor de documentos"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_template__document_viewer_file_name
 msgid "Document Viewer File Name"
-msgstr ""
+msgstr "Nombre del archivo del visor de documentos"
 
 #. module: muk_quality_docs_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
 msgid "Extension"
-msgstr ""
+msgstr "Extensión"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document__file
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
 msgid "File"
-msgstr ""
+msgstr "Archivo"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings__file_directory
 msgid "File Directory"
-msgstr ""
+msgstr "Carpetas de archivos"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document__file_ext
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document__viewer_file_ext
 msgid "File Extension"
-msgstr ""
+msgstr "Extensión de archivo"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document__file_name
 msgid "File Name"
-msgstr ""
+msgstr "Nombre del archivo"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings__file_directory
 msgid "Folder where controlled document files are saved in."
-msgstr ""
+msgstr "Carpeta donde se guardan los archivos de documentos controlados."
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings__template_file_directory
 msgid "Folder where controlled document template files are saved in."
-msgstr ""
+msgstr "Carpeta donde se guardan las plantillas de documentos controlados."
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings__template_viewer_file_directory
 msgid "Folder where controlled document template viewer files are saved in."
-msgstr ""
+msgstr "Carpeta donde se guardan los archivos del visor de plantillas de documentos controlados."
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings__viewer_file_directory
 msgid "Folder where controlled document viewer files are saved in."
-msgstr ""
+msgstr "Carpeta donde se guardan los archivos del visor de documentos controlados."
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document__has_preview
 msgid "Has Preview"
-msgstr ""
+msgstr "Tiene vista previa"
 
 #. module: muk_quality_docs_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #. module: muk_quality_docs_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.documents_kanban_dms
 msgid "Preview"
-msgstr ""
+msgstr "Previsualizar"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document__preview_binary
 msgid "Preview Binary"
-msgstr ""
+msgstr "Vista previa binaria"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document__preview_name
 msgid "Preview Name"
-msgstr ""
+msgstr "Nombre de vista previa"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model,name:muk_quality_docs_dms.model_muk_quality_docs_document
 msgid "QMS Document"
-msgstr ""
+msgstr "Documento SGD"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model,name:muk_quality_docs_dms.model_muk_quality_docs_template
 msgid "QMS Template"
-msgstr ""
+msgstr "Plantilla SGD"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings__template_file_directory
 msgid "Template File Directory"
-msgstr ""
+msgstr "Carpetas de archivos de plantilla"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings__template_viewer_file_directory
 msgid "Template Viewer File Directory"
-msgstr ""
+msgstr "Carpetas de archivos del visor de plantillas"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document__user_can_only_see_viewer_file
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings__user_can_only_see_viewer_file
 msgid "User Can Only See Viewer File"
-msgstr ""
+msgstr "El usuario solo puede ver el archivo del visor"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,help:muk_quality_docs_dms.field_res_config_settings__user_can_only_see_viewer_file
 msgid "User can only see viewer file (if one is provided)."
-msgstr ""
+msgstr "El usuario solo puede ver el archivo del visor (si se proporciona uno)."
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document__viewer_file
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.document_form_dms
 #: model_terms:ir.ui.view,arch_db:muk_quality_docs_dms.template_form_dms
 msgid "Viewer File"
-msgstr ""
+msgstr "Archivo de visor"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_res_config_settings__viewer_file_directory
 msgid "Viewer File Directory"
-msgstr ""
+msgstr "Carpetas de archivos de visor"
 
 #. module: muk_quality_docs_dms
 #: model:ir.model.fields,field_description:muk_quality_docs_dms.field_muk_quality_docs_document__viewer_file_name
 msgid "Viewer File Name"
-msgstr ""
+msgstr "Nombre de archivo del visor"
 
